@@ -1,4 +1,8 @@
-public class DijkstrasLazyShortestPathAdjacencyMatrix {
+package main.java.com.coding.graph;
+
+import java.util.*;
+
+public class DijkstrasLazyShortestPathAdjacencyList {
      public static final double EPS = 1e-6;
      
      class Edge {
@@ -26,22 +30,22 @@ public class DijkstrasLazyShortestPathAdjacencyMatrix {
           @Override
           public int compare(Node a, Node b) {
               if (a.cost - b.cost < EPS) return 0;
-              return (a.cost - b.cost > 0 : 1 : -1);
+              return (a.cost - b.cost > 0 ? 1 : -1);
           }
      }; 
 
-     public DijkstrasLazyShortestPathAdjacencyMatrix(int n) {
+     public DijkstrasLazyShortestPathAdjacencyList(int n) {
          this.n = n;
          createEmptyGraph();
      }
 
-     public DijkstrasShortestPathAdjacencyList(int n, Comparator<Node> comparator) {
+     public DijkstrasLazyShortestPathAdjacencyList(int n, Comparator<Node> comparator) {
          this(n);
          if (comparator == null) throw new IllegalArgumentException("Comparator cannot be null");
          this.comparator = comparator;
      }
 
-     public getShortestPath(int start, int end) {
+     public List<Integer> getShortestPath(int start, int end) {
          if (end < 0 || end >= n) throw new IllegalArgumentException("Invalid node index");
          if (start < 0 || start >= n) throw new IllegalArgumentException("Invalid node index");
          double dist = dijkstra(start, end);
@@ -52,7 +56,7 @@ public class DijkstrasLazyShortestPathAdjacencyMatrix {
          return path;
      }
 
-     private double dijkstras(int from, int to) {
+     private double dijkstra(int from, int to) {
           double[] dist = new double[n];
           Arrays.fill(dist, Double.POSITIVE_INFINITY);
           boolean[] visited = new boolean[n];

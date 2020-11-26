@@ -1,10 +1,6 @@
-public class Graph {
-        package test.mytest;
+package main.java.com.coding.graph;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.*;
-import java.util.PriorityQueue;
 
 /**
 This is lazy implementation of dijkstra as we keep stale values in PQ and delete them later when found. 

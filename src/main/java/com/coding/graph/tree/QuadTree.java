@@ -1,4 +1,4 @@
-package test.mytest;
+package main.java.com.coding.graph.tree;
 /*
 A quadtree is a tree data structure in which each internal node has exactly four children. Quadtrees are most often used to
 partition a two-dimensional space by recursively subdividing it into four quadrants or regions. The regions may be square or 
