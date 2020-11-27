@@ -1,0 +1,9 @@
+Depth first search:
+
+Topological sort: 
+wiki: A topological ordering is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.
+1. Topological sort Kahn's algo
+2. DFS based algo
+
+Shortest Path Algorithms:
+1. Dijkstra: Single source to all node shortest path
