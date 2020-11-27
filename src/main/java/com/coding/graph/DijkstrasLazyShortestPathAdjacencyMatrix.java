@@ -53,7 +53,9 @@ public class DijkstrasLazyShortestPathAdjacencyMatrix {
                 }
            }
 
-           return dist;
+           
        }  
+       
+       return dist;
     }
 }

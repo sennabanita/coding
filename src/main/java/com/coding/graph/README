@@ -6,4 +6,12 @@ wiki: A topological ordering is a linear ordering of its vertices such that for 
 2. DFS based algo
 
 Shortest Path Algorithms:
-1. Dijkstra: Single source to all node shortest path
+Single source shortest path:
+1. Using topological ordering, work for -ve and +ve weight O(V+E)
+2. Dijkstra: Single source to all node shortest path - works only for +ve edges
+   a. With binary heap O((V+E) logV)
+   b. With binary indexed heap
+   c. With D-ary heap
+3. Bellman ford O(VE) - can handle -ve weights and detect -ve cycle in the graph
+All Pair shortest path
+1. Floyd Warshall O(n3)
